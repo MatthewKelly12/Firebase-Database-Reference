@@ -4,10 +4,24 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+	<!-- Firebase App is always required and must be first -->
+	<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-app.js"></script>
+
+	<!-- Add additional services that you want to use -->
+	<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-database.js"></script>
 	<title>Firebase DB Example</title>
 </head>
 <body>
+	<div>
+		<h1 >Name<input id='name' type="text"></h1>
+		<h1 >Age<input id='age' type="text"></h1>
+		<button id='butt'>Enter</button>
+	</div>
+   	<article class="mainArt"></article>
 
+   	<script src="main.js"></script>
 </body>
 </html>
 
