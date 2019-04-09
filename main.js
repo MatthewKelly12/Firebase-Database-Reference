@@ -1,11 +1,9 @@
 //   TODO: Replace with your project's customized code snippet
 var config = {
-	apiKey: "AIzaSyBrKaKCuxCJDHFLFVo96GdFYovLpk1K_Xs",
-    authDomain: "test-json-e5807.firebaseapp.com",
-    databaseURL: "https://test-json-e5807.firebaseio.com",
-    projectId: "test-json",
-    // storageBucket: "<BUCKET>.appspot.com",
-    // messagingSenderId: "<SENDER_ID>",
+	apiKey: keyAPI,
+    authDomain: domainAuth,
+    databaseURL: dbUrl,
+    projectId: idProject
 };
 
 //   Initialize Firebase
