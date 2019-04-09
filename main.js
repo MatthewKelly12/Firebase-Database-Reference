@@ -19,6 +19,7 @@ function writeUserData(userName, userAge) {
 	});
 }
 
+
 // CREATE VARIABLE FOR BUTTON
 const butt = document.getElementById('butt')
 
@@ -34,7 +35,25 @@ butt.onclick = function () {
 // CREATE VARIABLE FOR BUTTON
 const buttUser = document.getElementById('buttUser')
 
-// ADD CLLIK EVENT TO BUTTON, WRITE DATA TO FIREBASE
+// SET VARIABLE TO GET REFERENCE TO USERS
+let getUsers = firebase.database().ref('users/');
+
+// ADD CLLIK EVENT TO BUTTON, GET USERS FROM FIREBASE
 buttUser.onclick = function () {
-	console.log('click')
+	getUsers.on('value',function(user) {
+		// RETURNS OBJECT OF ALL USERS
+		let users = user.val();
+		// console.log(users)
+
+		for (let x in users) {
+			// x is the key, users[x] is each user
+			console.log(x, users[x], users[x].name, users[x].age)
+		}
+		// console.log(person.key);
+		// PUTS KEYS OF OBJECT PERSONS IN AN ARRAY
+		// let key = Object.keys(person.val());
+		// console.log(key)
+		// key.forEach(k => console.log(k))
+
+	});
 }
