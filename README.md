@@ -9,6 +9,10 @@
 ### Add Code to Write to DB
 <img src='images/write-data.png'>
 
-### Creates users table in db with properties and values
+### Creates Users Table in db with Properties and Values
 <img src='images/users.png'>
+
+### Read From Database @ /users
+<img src='images/get-data.png'>
+
 
