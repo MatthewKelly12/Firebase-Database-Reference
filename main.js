@@ -40,20 +40,17 @@ let getUsers = firebase.database().ref('users/');
 
 // ADD CLLIK EVENT TO BUTTON, GET USERS FROM FIREBASE
 buttUser.onclick = function () {
-	getUsers.on('value',function(user) {
+	getUsers.on('value', function(user) {
+
 		// RETURNS OBJECT OF ALL USERS
 		let users = user.val();
 		// console.log(users)
 
+		// LOOP OVER OBJECTS
 		for (let x in users) {
 			// x is the key, users[x] is each user
 			console.log(x, users[x], users[x].name, users[x].age)
 		}
-		// console.log(person.key);
-		// PUTS KEYS OF OBJECT PERSONS IN AN ARRAY
-		// let key = Object.keys(person.val());
-		// console.log(key)
-		// key.forEach(k => console.log(k))
 
 	});
 }
